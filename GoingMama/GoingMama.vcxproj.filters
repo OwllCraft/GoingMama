@@ -19,6 +19,18 @@
     <Filter Include="Source Files\Game Engine">
       <UniqueIdentifier>{4bf75967-ffcf-4bbc-bd97-7bfa92713114}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Scenes">
+      <UniqueIdentifier>{1e9241e4-c717-4fa1-bc13-9dc0356660b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes">
+      <UniqueIdentifier>{53f1808d-3672-4da1-b375-f1f50fba972e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game Objects">
+      <UniqueIdentifier>{5e0a8d68-c1f0-4ef1-b2bc-b09b409666fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Objects">
+      <UniqueIdentifier>{b6711690-f10f-45e2-a3ca-7d566d347cde}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,8 +45,20 @@
     <ClCompile Include="SceneMachine.cpp">
       <Filter>Source Files\Game Engine</Filter>
     </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
     <ClCompile Include="SplashScene.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Land.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Pillar.cpp">
+      <Filter>Source Files\Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,7 +77,19 @@
     <ClInclude Include="SceneMachine.hpp">
       <Filter>Header Files\Game Engine</Filter>
     </ClInclude>
+    <ClInclude Include="GameScene.hpp">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuScene.hpp">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
     <ClInclude Include="SplashScene.hpp">
+      <Filter>Header Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Land.hpp">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Pillar.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

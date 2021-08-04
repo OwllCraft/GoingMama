@@ -146,15 +146,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppEngine.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Land.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainMenuScene.cpp" />
+    <ClCompile Include="Pillar.cpp" />
     <ClCompile Include="SceneMachine.cpp" />
     <ClCompile Include="SplashScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppEngine.hpp" />
     <ClInclude Include="DEFINITIONS.hpp" />
+    <ClInclude Include="GameScene.hpp" />
     <ClInclude Include="InputManager.hpp" />
+    <ClInclude Include="Land.hpp" />
+    <ClInclude Include="MainMenuScene.hpp" />
+    <ClInclude Include="Pillar.hpp" />
     <ClInclude Include="Scene.hpp" />
     <ClInclude Include="SceneMachine.hpp" />
     <ClInclude Include="SplashScene.hpp" />

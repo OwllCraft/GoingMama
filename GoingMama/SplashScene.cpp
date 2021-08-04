@@ -1,4 +1,5 @@
 #include "SplashScene.hpp"
+#include "MainMenuScene.hpp"
 #include "DEFINITIONS.hpp"
 
 #include <iostream> // Debugging purposes
@@ -24,7 +25,9 @@ namespace OwllCraft {
 	}
 
 	void SplashScene::update(float deltaTime) {
-
+		if (mClock.getElapsedTime().asSeconds() > _SPLASH_SHOW_TIME_) {
+			this->mData->scene.changeScene(SceneRef(new MainMenuScene(this->mData)));
+		}
 	}
 
 	void SplashScene::draw(float deltaTime) {

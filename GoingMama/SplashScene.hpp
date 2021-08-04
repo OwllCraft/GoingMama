@@ -19,6 +19,9 @@ namespace OwllCraft {
 		// Game data:
 		AppDataRef mData;
 
+		// Clock:
+		sf::Clock mClock;
+
 		// Splash Background:
 		sf::Sprite mSplashBackground;
 		sf::Texture mSplashBackgroundTex;
