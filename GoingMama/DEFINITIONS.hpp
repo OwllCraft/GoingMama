@@ -69,3 +69,11 @@
 
 // Font:
 #define _GAME_FONT_FILEPATH_ "Resources/Fonts/OwllCraftFont.ttf"
+
+/*****************************
+		Audio Assets
+******************************/
+
+#define _HIT_SFX_FILEPATH_ "Resources/Audio/Hit.wav"
+#define _WING_SFX_FILEPATH_ "Resources/Audio/Wing.wav"
+#define _POINT_SFX_FILEPATH_ "Resources/Audio/Point.wav"

@@ -9,6 +9,7 @@ namespace OwllCraft {
 		// Sprites Initialization:
 		backgroundInit();
 		gameObjectInit();
+		soundFXInit();
 
 		mScore = 0;
 		mGameState = GameState::eReady;
@@ -29,12 +30,16 @@ namespace OwllCraft {
 				if (GameState::eGameOver != mGameState) {
 					mGameState = GameState::eGameplay;
 					mPlayer->tap();
+					mWingSfx.play();
 				}
 			}
 		}
 	}
 
 	void GameScene::update(float deltaTime) {
+		if (mScore > 9) 
+			mScoreText.setOrigin(sf::Vector2f((mScoreText.getGlobalBounds().width / 2) - 3.f , mScoreText.getGlobalBounds().height / 2));
+
 		if (GameState::eGameOver != mGameState) {
 			mLand->moveLand(deltaTime);
 			mPlayer->animate(deltaTime);
@@ -112,6 +117,17 @@ namespace OwllCraft {
 		mFlash = new Flash(this->mData);
 	}
 
+	void GameScene::soundFXInit() {
+		mHitBufferSfx.loadFromFile(_HIT_SFX_FILEPATH_);
+		mHitSfx.setBuffer(mHitBufferSfx);
+
+		mPointBufferSfx.loadFromFile(_POINT_SFX_FILEPATH_);
+		mPointSfx.setBuffer(mPointBufferSfx);
+
+		mWingBufferSfx.loadFromFile(_WING_SFX_FILEPATH_);
+		mWingSfx.setBuffer(mWingBufferSfx);
+	}
+
 	void GameScene::objectCollision() {
 
 		// Land Collision:
@@ -119,6 +135,7 @@ namespace OwllCraft {
 		for (size_t i = 0; i < landCollision.size(); i++) {
 			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.8f, landCollision.at(i), 1.0f)) {
 				mGameState = GameState::eGameOver;
+				mHitSfx.play();
 				mGameClock.restart();
 			}
 		}
@@ -128,6 +145,7 @@ namespace OwllCraft {
 		for (size_t i = 0; i < pillarCollision.size(); i++) {
 			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.4f, pillarCollision.at(i), 1.0f)) {
 				mGameState = GameState::eGameOver;
+				mHitSfx.play();
 				mGameClock.restart();
 			}
 		}
@@ -139,6 +157,7 @@ namespace OwllCraft {
 				if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.4f, scoringCollision.at(i), 1.0f)) {
 					mScore++;
 					scoringCollision.erase(scoringCollision.begin() + i);
+					mPointSfx.play();
 					mScoreText.setString(std::to_string(mScore));
 				}
 			}

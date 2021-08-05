@@ -33,16 +33,20 @@ namespace OwllCraft {
 		mScoreText.setString(std::to_string(mScore));
 		mScoreText.setFillColor(sf::Color::White);
 		mScoreText.setCharacterSize(48);
+		mScoreText.setOutlineColor(sf::Color(0, 5, 91));
+		mScoreText.setOutlineThickness(5.f);
 		mScoreText.setOrigin(mScoreText.getGlobalBounds().width / 2, mScoreText.getGlobalBounds().height / 2);
-		mScoreText.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 85.f, mGameOverPanel.getPosition().y + 40.f);
+		mScoreText.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 81.f, mGameOverPanel.getPosition().y + 43.f);
 
 		// Highscore Text:
 		mHighScoreText.setFont(mGameFont);
 		mHighScoreText.setString(std::to_string(mHighScore));
 		mHighScoreText.setFillColor(sf::Color::White);
 		mHighScoreText.setCharacterSize(48);
+		mHighScoreText.setOutlineColor(sf::Color(0, 5, 91));
+		mHighScoreText.setOutlineThickness(5.f);
 		mHighScoreText.setOrigin(mHighScoreText.getGlobalBounds().width / 2, mHighScoreText.getGlobalBounds().height / 2);
-		mHighScoreText.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 85.f, mGameOverPanel.getPosition().y + 40.f * 3.2f);
+		mHighScoreText.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 81.f, mGameOverPanel.getPosition().y + 43.f * 3.11f);
 	}
 
 	void GameOverScene::handleInput() {

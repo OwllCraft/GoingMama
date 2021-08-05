@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "AppEngine.hpp"
 #include "Scene.hpp"
@@ -40,6 +41,7 @@ namespace OwllCraft {
 		void objectCollision();
 		void scoreTextInit();
 		void pressStartInit();
+		void soundFXInit();
 
 	private:
 		// Show:
@@ -60,6 +62,10 @@ namespace OwllCraft {
 		AppDataRef mData;
 		sf::Clock mGameClock;
 		sf::Clock mGameJuiceTime;
+
+		// Sound Effects:
+		sf::SoundBuffer mHitBufferSfx, mPointBufferSfx, mWingBufferSfx;
+		sf::Sound mHitSfx, mPointSfx, mWingSfx;
 
 		// Background Sprite:
 		sf::Sprite mBackground;
