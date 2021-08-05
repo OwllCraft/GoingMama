@@ -41,21 +41,22 @@ namespace OwllCraft {
 
 			// Game Juice
 			if (mGameJuiceTime.getElapsedTime().asSeconds() > _PRESS_START_FREQUENCY_) {
-				mPressStart.setFillColor(sf::Color(0, 0, 0, 0)); // hide press start label
+				hidePressStartLabel();
+
 				if (mGameJuiceTime.getElapsedTime().asSeconds() > _PRESS_START_FREQUENCY_ + 0.5f) {
 					mGameJuiceTime.restart();
 				}
 			}
 			else {
-				mPressStart.setFillColor(sf::Color(255, 204, 213)); // hide press start label
+				showPressStartLabel();
 			}
 				
-			mScoreText.setFillColor(sf::Color(0, 0, 0, 0)); // hide the score text
+			hideScoreText();
 		}
 
 		if (GameState::eGameplay == mGameState) {
-			mScoreText.setFillColor(sf::Color(255, 204, 213)); // Show Score text
-			mPressStart.setFillColor(sf::Color(0, 0, 0, 0)); // hide press start label
+			showScoreText();
+			hidePressStartLabel();
 
 			mPillar->movePillars(deltaTime);
 
@@ -149,6 +150,7 @@ namespace OwllCraft {
 		mScoreText.setFont(mGameFont);
 		mScoreText.setString("0");
 		mScoreText.setCharacterSize(128);
+		mScoreText.setOutlineThickness(10.f);
 		mScoreText.setOrigin(sf::Vector2f(mScoreText.getGlobalBounds().width / 2, mScoreText.getGlobalBounds().height / 2));
 		mScoreText.setPosition(sf::Vector2f(this->mData->window.getSize().x / 2, (this->mData->window.getSize().y / 2) - 150.0f));
 	}
@@ -157,7 +159,28 @@ namespace OwllCraft {
 		mPressStart.setFont(mGameFont);
 		mPressStart.setString("Press left mouse button\n to play!");
 		mPressStart.setCharacterSize(24);
+		mPressStart.setOutlineThickness(5.f);
 		mPressStart.setOrigin(sf::Vector2f(mPressStart.getGlobalBounds().width / 2, mPressStart.getGlobalBounds().height / 2));
 		mPressStart.setPosition((sf::Vector2f((this->mData->window.getSize().x / 2), (this->mData->window.getSize().y / 2) - 150.0f)));
+	}
+
+	void GameScene::showScoreText() {
+		mScoreText.setFillColor(sf::Color(255, 204, 213));
+		mScoreText.setOutlineColor(sf::Color(0, 5, 91));
+	}
+
+	void GameScene::showPressStartLabel() {
+		mPressStart.setFillColor(sf::Color(255, 204, 213));
+		mPressStart.setOutlineColor(sf::Color(0, 5, 91));
+	}
+
+	void GameScene::hideScoreText() {
+		mScoreText.setFillColor(sf::Color(0, 0, 0, 0));
+		mScoreText.setOutlineColor(sf::Color(0, 0, 0, 0));
+	}
+
+	void GameScene::hidePressStartLabel() {
+		mPressStart.setFillColor(sf::Color(0, 0, 0, 0));
+		mPressStart.setOutlineColor(sf::Color(0, 0, 0, 0));
 	}
 }

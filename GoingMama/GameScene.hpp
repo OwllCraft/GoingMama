@@ -42,6 +42,14 @@ namespace OwllCraft {
 		void pressStartInit();
 
 	private:
+		// Show:
+		void showScoreText();
+		void showPressStartLabel();
+
+		// Hide:
+		void hideScoreText();
+		void hidePressStartLabel();
+	private:
 		enum GameState {
 			eReady,
 			eGameplay,

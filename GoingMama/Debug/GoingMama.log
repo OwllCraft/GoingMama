@@ -1,5 +1,7 @@
-﻿  GameScene.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(153,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+﻿  GameOverScene.cpp
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameOverScene.cpp(28,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  GameScene.cpp
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(155,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -8,7 +10,7 @@ E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(15
           [
               T=float
           ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(161,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(164,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
