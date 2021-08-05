@@ -29,6 +29,9 @@
 // Transition Effects:
 #define _FLASH_SPEED_ 1500.0f
 
+// Game Juices:
+#define _PRESS_START_FREQUENCY_ 0.3f
+
 /*****************************
 		Sprite Assets
 ******************************/
@@ -59,5 +62,10 @@
 #define _PLAY_BUTTON_FILEPATH_ "Resources/Sprites/playButton.png"
 #define _RETRY_BUTTON_FILEPATH_ "Resources/Sprites/retryButton.png"
 
+#define _GAME_OVER_PANEL_ "Resources/Sprites/gameOverPanel.png"
+
 // Collision Sprite:
 #define _INVISIBLE_PILLAR_FILEPATH_ "Resources/Sprites/invisiblePillar.png"
+
+// Font:
+#define _GAME_FONT_FILEPATH_ "Resources/Fonts/OwllCraftFont.ttf"

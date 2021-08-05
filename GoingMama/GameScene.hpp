@@ -1,8 +1,9 @@
 #pragma once
 
+#include <SFML/Graphics.hpp>
+
 #include "AppEngine.hpp"
 #include "Scene.hpp"
-#include <SFML/Graphics.hpp>
 #include "Collision.hpp"
 
 // Game Scene:
@@ -13,8 +14,6 @@
 #include "Pillar.hpp"
 #include "Player.hpp"
 
-// HUD:
-
 // Transition Effect
 #include "Flash.hpp"
 
@@ -24,10 +23,10 @@ namespace OwllCraft {
 		GameScene(AppDataRef data)
 			: mData(data) {}
 		~GameScene() {
-			delete land;
-			delete pillar;
-			delete player;
-			delete flash;
+			delete mLand;
+			delete mPillar;
+			delete mPlayer;
+			delete mFlash;
 		}
 
 		void init() override;
@@ -39,6 +38,8 @@ namespace OwllCraft {
 		void gameObjectInit();
 		void backgroundInit();
 		void objectCollision();
+		void scoreTextInit();
+		void pressStartInit();
 
 	private:
 		enum GameState {
@@ -49,22 +50,28 @@ namespace OwllCraft {
 
 	private:
 		AppDataRef mData;
-		sf::Clock gameClock;
-		
+		sf::Clock mGameClock;
+		sf::Clock mGameJuiceTime;
+
 		// Background Sprite:
 		sf::Sprite mBackground;
 		sf::Texture mBackgroundTex;
 
 		// Game Objects:
-		Land* land;
-		Pillar* pillar;
-		Player* player;
+		Land* mLand;
+		Pillar* mPillar;
+		Player* mPlayer;
+
+		// HUD:
+		sf::Font mGameFont;
+		sf::Text mScoreText;
+		sf::Text mPressStart;
 
 		// Transition Effect:
-		Flash* flash;
+		Flash* mFlash;
 
 		// Game System:
-		Collision collision;
+		Collision mCollision;
 		int mGameState;
 		int mScore;
 	};

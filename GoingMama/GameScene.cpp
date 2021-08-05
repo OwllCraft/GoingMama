@@ -1,15 +1,21 @@
 #include "GameScene.hpp"
 #include "DEFINITIONS.hpp"
 
+#include <sstream>
 #include <iostream> // Debugging purposes
 
 namespace OwllCraft {
 	void GameScene::init() {
+		// Sprites Initialization:
 		backgroundInit();
 		gameObjectInit();
 
 		mScore = 0;
 		mGameState = GameState::eReady;
+
+		// Font Initialization:
+		scoreTextInit();
+		pressStartInit();
 	}
 
 	void GameScene::handleInput() {
@@ -22,7 +28,7 @@ namespace OwllCraft {
 			if (this->mData->input.isSpriteClicked(mBackground, sf::Mouse::Left, this->mData->window)) {
 				if (GameState::eGameOver != mGameState) {
 					mGameState = GameState::eGameplay;
-					player->tap();
+					mPlayer->tap();
 				}
 			}
 		}
@@ -30,32 +36,48 @@ namespace OwllCraft {
 
 	void GameScene::update(float deltaTime) {
 		if (GameState::eGameOver != mGameState) {
-			land->moveLand(deltaTime);
-			player->animate(deltaTime);
+			mLand->moveLand(deltaTime);
+			mPlayer->animate(deltaTime);
+
+			// Game Juice
+			if (mGameJuiceTime.getElapsedTime().asSeconds() > _PRESS_START_FREQUENCY_) {
+				mPressStart.setFillColor(sf::Color(0, 0, 0, 0)); // hide press start label
+				if (mGameJuiceTime.getElapsedTime().asSeconds() > _PRESS_START_FREQUENCY_ + 0.5f) {
+					mGameJuiceTime.restart();
+				}
+			}
+			else {
+				mPressStart.setFillColor(sf::Color(255, 204, 213)); // hide press start label
+			}
+				
+			mScoreText.setFillColor(sf::Color(0, 0, 0, 0)); // hide the score text
 		}
 
 		if (GameState::eGameplay == mGameState) {
-			pillar->movePillars(deltaTime);
+			mScoreText.setFillColor(sf::Color(255, 204, 213)); // Show Score text
+			mPressStart.setFillColor(sf::Color(0, 0, 0, 0)); // hide press start label
 
-			if (gameClock.getElapsedTime().asSeconds() > _PILLAR_SPAWN_FREQUENCY_) {
-				pillar->randomizePillarOffset();
+			mPillar->movePillars(deltaTime);
 
-				pillar->spawnBottomPillar();
-				pillar->spawnTopPillar();
-				pillar->spawnScoringPillar();
+			if (mGameClock.getElapsedTime().asSeconds() > _PILLAR_SPAWN_FREQUENCY_) {
+				mPillar->randomizePillarOffset();
 
-				gameClock.restart();
+				mPillar->spawnBottomPillar();
+				mPillar->spawnTopPillar();
+				mPillar->spawnScoringPillar();
+
+				mGameClock.restart();
 			}
 
-			player->update(deltaTime);
+			mPlayer->update(deltaTime);
 
 			objectCollision(); // Game Object Collision
 		}
 
 		if (GameState::eGameOver == mGameState) {
-			flash->show(deltaTime);
-			if (gameClock.getElapsedTime().asSeconds() > _GAME_OVER_SHOW_TIME_) {
-				this->mData->scene.changeScene(SceneRef(new GameOverScene(this->mData)));
+			mFlash->show(deltaTime);
+			if (mGameClock.getElapsedTime().asSeconds() > _GAME_OVER_SHOW_TIME_) {
+				this->mData->scene.changeScene(SceneRef(new GameOverScene(this->mData, mScore)));
 			}
 		}
 	}
@@ -65,11 +87,13 @@ namespace OwllCraft {
 		this->mData->window.draw(mBackground);
 
 		// Draw Game Objects:
-		this->pillar->drawPillars();
-		this->land->drawLand();
-		this->player->draw();
+		this->mPillar->drawPillars();
+		this->mLand->drawLand();
+		this->mPlayer->draw();
 
-		this->flash->draw();
+		this->mData->window.draw(mPressStart);
+		this->mData->window.draw(mScoreText);
+		this->mFlash->draw();
 
 		this->mData->window.display();
 	}
@@ -80,43 +104,60 @@ namespace OwllCraft {
 	}
 
 	void GameScene::gameObjectInit() {
-		land = new Land(this->mData);
-		pillar = new Pillar(this->mData);
-		player = new Player(this->mData);
+		mLand = new Land(this->mData);
+		mPillar = new Pillar(this->mData);
+		mPlayer = new Player(this->mData);
 
-		flash = new Flash(this->mData);
+		mFlash = new Flash(this->mData);
 	}
 
 	void GameScene::objectCollision() {
 
 		// Land Collision:
-		std::vector<sf::Sprite> landCollision = land->getSprites();
+		std::vector<sf::Sprite> landCollision = mLand->getSprites();
 		for (size_t i = 0; i < landCollision.size(); i++) {
-			if (collision.CheckSpriteCollision(player->getSprite(), 0.7f, landCollision.at(i), 1.0f)) {
+			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.8f, landCollision.at(i), 1.0f)) {
 				mGameState = GameState::eGameOver;
-				gameClock.restart();
+				mGameClock.restart();
 			}
 		}
 
 		// Pillar Collision:
-		std::vector<sf::Sprite> pillarCollision = pillar->getSprites();
+		std::vector<sf::Sprite> pillarCollision = mPillar->getSprites();
 		for (size_t i = 0; i < pillarCollision.size(); i++) {
-			if (collision.CheckSpriteCollision(player->getSprite(), 0.4f, pillarCollision.at(i), 1.0f)) {
+			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.4f, pillarCollision.at(i), 1.0f)) {
 				mGameState = GameState::eGameOver;
-				gameClock.restart();
+				mGameClock.restart();
 			}
 		}
 
 		// Scoring Collision:
 		if (GameState::eGameplay == mGameState) {
-			std::vector<sf::Sprite>& scoringCollision = pillar->getScoringSprites();
+			std::vector<sf::Sprite>& scoringCollision = mPillar->getScoringSprites();
 			for (size_t i = 0; i < scoringCollision.size(); i++) {
-				if (collision.CheckSpriteCollision(player->getSprite(), 0.4f, scoringCollision.at(i), 1.0f)) {
+				if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.4f, scoringCollision.at(i), 1.0f)) {
 					mScore++;
 					scoringCollision.erase(scoringCollision.begin() + i);
-					std::cout << mScore << std::endl;
+					mScoreText.setString(std::to_string(mScore));
 				}
 			}
 		}
+	}
+
+	void GameScene::scoreTextInit() {
+		mGameFont.loadFromFile(_GAME_FONT_FILEPATH_);
+		mScoreText.setFont(mGameFont);
+		mScoreText.setString("0");
+		mScoreText.setCharacterSize(128);
+		mScoreText.setOrigin(sf::Vector2f(mScoreText.getGlobalBounds().width / 2, mScoreText.getGlobalBounds().height / 2));
+		mScoreText.setPosition(sf::Vector2f(this->mData->window.getSize().x / 2, (this->mData->window.getSize().y / 2) - 150.0f));
+	}
+
+	void GameScene::pressStartInit() {
+		mPressStart.setFont(mGameFont);
+		mPressStart.setString("Press left mouse button\n to play!");
+		mPressStart.setCharacterSize(24);
+		mPressStart.setOrigin(sf::Vector2f(mPressStart.getGlobalBounds().width / 2, mPressStart.getGlobalBounds().height / 2));
+		mPressStart.setPosition((sf::Vector2f((this->mData->window.getSize().x / 2), (this->mData->window.getSize().y / 2) - 150.0f)));
 	}
 }

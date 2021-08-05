@@ -1,5 +1,5 @@
-﻿  Land.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Land.cpp(27,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+﻿  GameScene.cpp
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(153,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -8,4 +8,15 @@ E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Land.cpp(27,51):
           [
               T=float
           ]
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(161,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  MainMenuScene.cpp
+  Generating Code...
   GoingMama.vcxproj -> E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\Debug\GoingMama.exe
