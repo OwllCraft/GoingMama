@@ -4,14 +4,14 @@
 /*****************************
 		Main Options
 ******************************/
-// Window Size
+// Window Size:
 #define _SCREEN_WIDTH_ 384
 #define _SCREEN_HEIGHT_ 768
 
 /*****************************
 		Game System
 ******************************/
-// Scene Timer
+// Scene Timer:
 #define _SPLASH_SHOW_TIME_ 0.f
 #define _GAME_OVER_SHOW_TIME_ 1.5f
 
@@ -19,10 +19,15 @@
 #define _PILLAR_SPAWN_FREQUENCY_ 1.5f
 
 #define _GRAVITY_ 350.f
+
+// Player:
+#define _PLAYER_ANIMATION_DURATION_ 0.4f
 #define _FLYING_SPEED_ 350.f
 #define _FLYING_DURATION_ 0.25f
+#define _ROTATION_SPEED_ 100.f
 
-#define ROTATION_SPEED 100.f
+// Transition Effects:
+#define _FLASH_SPEED_ 1500.0f
 
 /*****************************
 		Sprite Assets
@@ -39,6 +44,7 @@
 #define _PLAYER_FRAME_2_ "Resources/Sprites/player2.png"
 #define _PLAYER_FRAME_3_ "Resources/Sprites/player3.png"
 #define _PLAYER_FRAME_4_ "Resources/Sprites/player4.png"
+#define _PLAYER_FRAME_5_ "Resources/Sprites/player5.png"
 
 // Title Sprite:
 #define _GAME_TITLE_ "Resources/Sprites/gameTitle.png"

@@ -31,6 +31,12 @@
     <Filter Include="Source Files\Game Objects">
       <UniqueIdentifier>{b6711690-f10f-45e2-a3ca-7d566d347cde}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Transition Effects">
+      <UniqueIdentifier>{962f9fb8-f6a6-43c4-af12-e487c9dd64ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Transition Effects">
+      <UniqueIdentifier>{2a1dfb14-31d7-4551-84fd-b095068c6d36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -59,6 +65,18 @@
     </ClCompile>
     <ClCompile Include="Pillar.cpp">
       <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>Source Files\Game Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Flash.cpp">
+      <Filter>Source Files\Transition Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOverScene.cpp">
+      <Filter>Source Files\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,8 +107,20 @@
     <ClInclude Include="Land.hpp">
       <Filter>Header Files\Game Objects</Filter>
     </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.hpp">
+      <Filter>Header Files\Game Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Flash.hpp">
+      <Filter>Header Files\Transition Effects</Filter>
+    </ClInclude>
     <ClInclude Include="Pillar.hpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOverScene.hpp">
+      <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
