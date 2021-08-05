@@ -15,7 +15,7 @@
 #define _SPLASH_SHOW_TIME_ 0.f
 #define _GAME_OVER_SHOW_TIME_ 1.5f
 
-#define _PILLAR_MOVEMENT_SPEED_ 200.0f
+#define _PILLAR_MOVEMENT_SPEED_ 400.f
 #define _PILLAR_SPAWN_FREQUENCY_ 1.5f
 
 #define _GRAVITY_ 350.f

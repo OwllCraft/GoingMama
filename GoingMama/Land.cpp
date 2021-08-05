@@ -23,7 +23,7 @@ namespace OwllCraft {
 
 			mLandSprites.at(i).move(-movement, 0.0f);
 
-			if (mLandSprites.at(i).getPosition().x < 0 - mLandSprites.at(i).getLocalBounds().width + 2) {
+			if (mLandSprites.at(i).getPosition().x < 0 - mLandSprites.at(i).getLocalBounds().width) {
 				sf::Vector2f pos(this->mData->window.getSize().x, mLandSprites.at(i).getPosition().y);
 				mLandSprites.at(i).setPosition(pos);
 			}
