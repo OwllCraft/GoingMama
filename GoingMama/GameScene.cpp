@@ -42,6 +42,7 @@ namespace OwllCraft {
 
 		if (GameState::eGameOver != mGameState) {
 			mLand->moveLand(deltaTime);
+			mSky->moveSkyBlock(deltaTime);
 			mPlayer->animate(deltaTime);
 
 			// Game Juice
@@ -113,7 +114,7 @@ namespace OwllCraft {
 		mLand = new Land(this->mData);
 		mPillar = new Pillar(this->mData);
 		mPlayer = new Player(this->mData);
-
+		mSky = new SkyBlock(this->mData);
 		mFlash = new Flash(this->mData);
 	}
 
@@ -134,6 +135,16 @@ namespace OwllCraft {
 		std::vector<sf::Sprite> landCollision = mLand->getSprites();
 		for (size_t i = 0; i < landCollision.size(); i++) {
 			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.8f, landCollision.at(i), 1.0f)) {
+				mGameState = GameState::eGameOver;
+				mHitSfx.play();
+				mGameClock.restart();
+			}
+		}
+
+		// Sky Collision
+		std::vector<sf::Sprite> skyCollision = mSky->getSprite();
+		for (size_t i = 0; i < skyCollision.size(); i++) {
+			if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.8f, skyCollision.at(i), 1.0f)) {
 				mGameState = GameState::eGameOver;
 				mHitSfx.play();
 				mGameClock.restart();

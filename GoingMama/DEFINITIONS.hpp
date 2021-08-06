@@ -68,6 +68,7 @@
 
 // Collision Sprite:
 #define _INVISIBLE_PILLAR_FILEPATH_ "Resources/Sprites/invisiblePillar.png"
+#define _INVISIBLE_SKY_FILEPATH_ "Resources/Sprites/invisibleSky.png"
 
 // Font:
 #define _GAME_FONT_FILEPATH_ "Resources/Fonts/OwllCraftFont.ttf"
