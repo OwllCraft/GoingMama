@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Game Engine">
-      <UniqueIdentifier>{609e94b6-92da-430c-b32e-1505bdb32314}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Game Engine">
-      <UniqueIdentifier>{4bf75967-ffcf-4bbc-bd97-7bfa92713114}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Scenes">
       <UniqueIdentifier>{1e9241e4-c717-4fa1-bc13-9dc0356660b4}</UniqueIdentifier>
     </Filter>
@@ -37,19 +31,25 @@
     <Filter Include="Source Files\Transition Effects">
       <UniqueIdentifier>{2a1dfb14-31d7-4551-84fd-b095068c6d36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\OwllEngine">
+      <UniqueIdentifier>{609e94b6-92da-430c-b32e-1505bdb32314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OwllEngine">
+      <UniqueIdentifier>{4bf75967-ffcf-4bbc-bd97-7bfa92713114}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AppEngine.cpp">
-      <Filter>Source Files\Game Engine</Filter>
+      <Filter>Source Files\OwllEngine</Filter>
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
-      <Filter>Source Files\Game Engine</Filter>
+      <Filter>Source Files\OwllEngine</Filter>
     </ClCompile>
     <ClCompile Include="SceneMachine.cpp">
-      <Filter>Source Files\Game Engine</Filter>
+      <Filter>Source Files\OwllEngine</Filter>
     </ClCompile>
     <ClCompile Include="GameScene.cpp">
       <Filter>Source Files\Scenes</Filter>
@@ -70,7 +70,7 @@
       <Filter>Source Files\Game Objects</Filter>
     </ClCompile>
     <ClCompile Include="Collision.cpp">
-      <Filter>Source Files\Game Engine</Filter>
+      <Filter>Source Files\OwllEngine</Filter>
     </ClCompile>
     <ClCompile Include="Flash.cpp">
       <Filter>Source Files\Transition Effects</Filter>
@@ -84,16 +84,16 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.hpp">
-      <Filter>Header Files\Game Engine</Filter>
+      <Filter>Header Files\OwllEngine</Filter>
     </ClInclude>
     <ClInclude Include="Scene.hpp">
-      <Filter>Header Files\Game Engine</Filter>
+      <Filter>Header Files\OwllEngine</Filter>
     </ClInclude>
     <ClInclude Include="AppEngine.hpp">
-      <Filter>Header Files\Game Engine</Filter>
+      <Filter>Header Files\OwllEngine</Filter>
     </ClInclude>
     <ClInclude Include="SceneMachine.hpp">
-      <Filter>Header Files\Game Engine</Filter>
+      <Filter>Header Files\OwllEngine</Filter>
     </ClInclude>
     <ClInclude Include="GameScene.hpp">
       <Filter>Header Files\Scenes</Filter>
@@ -111,7 +111,7 @@
       <Filter>Header Files\Game Objects</Filter>
     </ClInclude>
     <ClInclude Include="Collision.hpp">
-      <Filter>Header Files\Game Engine</Filter>
+      <Filter>Header Files\OwllEngine</Filter>
     </ClInclude>
     <ClInclude Include="Flash.hpp">
       <Filter>Header Files\Transition Effects</Filter>
