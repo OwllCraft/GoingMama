@@ -1,1 +1,13 @@
-﻿  GoingMama.vcxproj -> E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\Debug\GoingMama.exe
+﻿  SplashScene.cpp
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(17,102): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(17,59): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(23,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+  GoingMama.vcxproj -> E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\Debug\GoingMama.exe

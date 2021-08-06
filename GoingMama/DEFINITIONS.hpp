@@ -1,6 +1,5 @@
 #pragma once
 
-
 /*****************************
 		Main Options
 ******************************/
@@ -12,7 +11,7 @@
 		Game System
 ******************************/
 // Scene Timer:
-#define _SPLASH_SHOW_TIME_ 0.f
+#define _SPLASH_SHOW_TIME_ 3.0f
 #define _GAME_OVER_SHOW_TIME_ 1.5f
 
 #define _PILLAR_MOVEMENT_SPEED_ 400.f
@@ -35,9 +34,12 @@
 /*****************************
 		Sprite Assets
 ******************************/
+// Splash:
+#define _SPLASH_BACKGROUND_FILEPATH_ "Resources/Sprites/background.png"
+#define _SPLASH_LOGO_ "Resources/Sprites/Splash/splashLogo.png"
+#define _SPLASH_LABEL_ "Resources/Sprites/Splash/splashLabel.png"
 
 // Background:
-#define _SPLASH_BACKGROUND_FILEPATH_ "Resources/Sprites/background.png"
 #define _MAINMENU_BACKGROUND_FILEPATH_ "Resources/Sprites/background.png"
 #define _GAMEPLAY_BACKGROUND_FILEPATH_ "Resources/Sprites/background.png"
 #define _GAMEOVER_BACKGROUND_FILEPATH_ "Resources/Sprites/background.png"

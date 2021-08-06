@@ -27,5 +27,11 @@ namespace OwllCraft {
 		sf::Texture mSplashBackgroundTex;
 
 		// Splash Icon:
+		sf::Sprite mSplashLogo;
+		sf::Texture mSplashLogoTex;
+
+		// Splash Label:
+		sf::Sprite mSplashLabel;
+		sf::Texture mSplashLabelTex;
 	};
 }
