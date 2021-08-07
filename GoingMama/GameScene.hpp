@@ -14,6 +14,7 @@
 #include "Land.hpp"
 #include "Pillar.hpp"
 #include "Player.hpp"
+#include "SkyBlock.hpp"
 
 // Transition Effect
 #include "Flash.hpp"
@@ -75,6 +76,7 @@ namespace OwllCraft {
 		Land* mLand;
 		Pillar* mPillar;
 		Player* mPlayer;
+		SkyBlock* mSky;
 
 		// HUD:
 		sf::Font mGameFont;

@@ -157,6 +157,7 @@
     <ClCompile Include="Pillar.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneMachine.cpp" />
+    <ClCompile Include="SkyBlock.cpp" />
     <ClCompile Include="SplashScene.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,7 @@
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="Scene.hpp" />
     <ClInclude Include="SceneMachine.hpp" />
+    <ClInclude Include="SkyBlock.hpp" />
     <ClInclude Include="SplashScene.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
