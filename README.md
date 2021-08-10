@@ -59,6 +59,9 @@ Thanks to Swagshaw, and Whyx for testing the game.
 
 ![](https://img.itch.zone/aW1nLzY2ODIyMjUucG5n/original/wy%2Fyx0.png)  
 
+#### WHERE TO DOWNLOAD?
+**Itch.io: [https://owllcraft.itch.io/goingmama](https://owllcraft.itch.io/goingmama)**
+
 #### SOCIAL MEDIAS:
 
 **Twitter: [https://twitter.com/OwllCraft](https://twitter.com/OwllCraft)**
