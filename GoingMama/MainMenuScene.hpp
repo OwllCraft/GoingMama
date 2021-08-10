@@ -3,6 +3,7 @@
 #include "AppEngine.hpp"
 #include "Scene.hpp"
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 namespace OwllCraft {
 	class MainMenuScene : public Scene {
@@ -17,6 +18,10 @@ namespace OwllCraft {
 
 	private:
 		AppDataRef mData;
+
+		// Button Sfx:
+		sf::SoundBuffer mButtonBufferSfx;
+		sf::Sound mButtonClickSfx;
 
 		// Background Sprite:
 		sf::Sprite mBackground;

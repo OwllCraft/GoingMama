@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "AppEngine.hpp"
 #include "Scene.hpp"
 
@@ -20,12 +21,20 @@ namespace OwllCraft {
 
 	private:
 		void updateHighScore();
-
+		void medalInit();
 	private:
 		AppDataRef mData;
 
 		int mScore;
 		int mHighScore;
+
+		// Button SFX:
+		sf::SoundBuffer mButtonBufferSfx;
+		sf::Sound mButtonClickSfx;
+
+		// Medal SFX:
+		sf::SoundBuffer mMedalBufferSfx;
+		sf::Sound mMedalSfx;
 
 		// Font:
 		sf::Font mGameFont;
@@ -47,5 +56,9 @@ namespace OwllCraft {
 		// Retry Button:
 		sf::Texture mRetryButtonTex;
 		sf::Sprite mRetryButton;
+
+		// Medal sprites
+		sf::Texture mMedalTex;
+		sf::Sprite mMedal;
 	};
 }

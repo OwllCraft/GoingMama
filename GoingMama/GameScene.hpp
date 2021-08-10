@@ -47,6 +47,7 @@ namespace OwllCraft {
 	private:
 		// Show:
 		void showScoreText();
+		void showScoreTenthsText();
 		void showPressStartLabel();
 
 		// Hide:
@@ -65,8 +66,8 @@ namespace OwllCraft {
 		sf::Clock mGameJuiceTime;
 
 		// Sound Effects:
-		sf::SoundBuffer mHitBufferSfx, mPointBufferSfx, mWingBufferSfx;
-		sf::Sound mHitSfx, mPointSfx, mWingSfx;
+		sf::SoundBuffer mHitBufferSfx, mPointBufferSfx, mWingBufferSfx, mTenthScoreBufferSfx;
+		sf::Sound mHitSfx, mPointSfx, mWingSfx, mTenthScoreSfx;
 
 		// Background Sprite:
 		sf::Sprite mBackground;
@@ -90,5 +91,8 @@ namespace OwllCraft {
 		Collision mCollision;
 		int mGameState;
 		int mScore;
+
+		// Misc:
+		bool mIsScoreTenths = false;
 	};
 }

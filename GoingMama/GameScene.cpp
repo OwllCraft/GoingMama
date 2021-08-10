@@ -61,7 +61,11 @@ namespace OwllCraft {
 		}
 
 		if (GameState::eGameplay == mGameState) {
-			showScoreText();
+			if (!mIsScoreTenths)
+				showScoreText();
+			else
+				showScoreTenthsText();
+			
 			hidePressStartLabel();
 
 			mPillar->movePillars(deltaTime);
@@ -125,6 +129,9 @@ namespace OwllCraft {
 		mPointBufferSfx.loadFromFile(_POINT_SFX_FILEPATH_);
 		mPointSfx.setBuffer(mPointBufferSfx);
 
+		mTenthScoreBufferSfx.loadFromFile(_TENTHS_SCORE_SFX_FILEPATH_);
+		mTenthScoreSfx.setBuffer(mTenthScoreBufferSfx);
+
 		mWingBufferSfx.loadFromFile(_WING_SFX_FILEPATH_);
 		mWingSfx.setBuffer(mWingBufferSfx);
 	}
@@ -166,9 +173,20 @@ namespace OwllCraft {
 			std::vector<sf::Sprite>& scoringCollision = mPillar->getScoringSprites();
 			for (size_t i = 0; i < scoringCollision.size(); i++) {
 				if (mCollision.CheckSpriteCollision(mPlayer->getSprite(), 0.4f, scoringCollision.at(i), 1.0f)) {
+					if (mIsScoreTenths)
+						mIsScoreTenths = false;
+
 					mScore++;
 					scoringCollision.erase(scoringCollision.begin() + i);
+					
+					// Tenths Point SFX:
 					mPointSfx.play();
+					if (mScore % 10 == 0) {
+						mScoreText.setFillColor(sf::Color::Yellow);
+						mTenthScoreSfx.play();
+						mIsScoreTenths = true;
+					}
+
 					mScoreText.setString(std::to_string(mScore));
 				}
 			}
@@ -212,5 +230,10 @@ namespace OwllCraft {
 	void GameScene::hidePressStartLabel() {
 		mPressStart.setFillColor(sf::Color(0, 0, 0, 0));
 		mPressStart.setOutlineColor(sf::Color(0, 0, 0, 0));
+	}
+
+	void GameScene::showScoreTenthsText() {
+		mScoreText.setFillColor(sf::Color::Yellow);
+		mScoreText.setOutlineColor(sf::Color(0, 5, 91));
 	}
 }

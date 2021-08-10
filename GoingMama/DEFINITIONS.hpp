@@ -66,6 +66,11 @@
 
 #define _GAME_OVER_PANEL_ "Resources/Sprites/gameOverPanel.png"
 
+// Medal Sprites:
+#define _BRONZE_MEDAL_FILEPATH_ "Resources/Sprites/medal_Bronze.png"
+#define _SILVER_MEDAL_FILEPATH_ "Resources/Sprites/medal_Silver.png"
+#define _GOLD_MEDAL_FILEPATH_ "Resources/Sprites/medal_Gold.png"
+
 // Collision Sprite:
 #define _INVISIBLE_PILLAR_FILEPATH_ "Resources/Sprites/invisiblePillar.png"
 #define _INVISIBLE_SKY_FILEPATH_ "Resources/Sprites/invisibleSky.png"
@@ -80,3 +85,7 @@
 #define _HIT_SFX_FILEPATH_ "Resources/Audio/Hit.wav"
 #define _WING_SFX_FILEPATH_ "Resources/Audio/Wing.wav"
 #define _POINT_SFX_FILEPATH_ "Resources/Audio/Point.wav"
+
+#define _BUTTON_SFX_FILEPATH_ "Resources/Audio/Button.wav"
+#define _MEDAL_SFX_FILEPATH_ "Resources/Audio/Medal.wav"
+#define _TENTHS_SCORE_SFX_FILEPATH_ "Resources/Audio/TenthsPoint.wav"

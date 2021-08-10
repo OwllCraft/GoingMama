@@ -3,10 +3,14 @@
 #include "DEFINITIONS.hpp"
 #include <cmath>
 
-#include <iostream> // Debugging Purposes
+// #include <iostream> // Debugging Purposes
 
 namespace OwllCraft {
 	void MainMenuScene::init() {
+		// Button Sfx Init:
+		mButtonBufferSfx.loadFromFile(_BUTTON_SFX_FILEPATH_);
+		mButtonClickSfx.setBuffer(mButtonBufferSfx);
+
 		// Background Initialize:
 		mBackgroundTex.loadFromFile(_MAINMENU_BACKGROUND_FILEPATH_);
 		mBackground.setTexture(mBackgroundTex);
@@ -30,6 +34,7 @@ namespace OwllCraft {
 				this->mData->window.close();
 			}
 			if (this->mData->input.isSpriteClicked(mPlayButton, sf::Mouse::Left, this->mData->window)) {
+				mButtonClickSfx.play();
 				this->mData->scene.changeScene(SceneRef(new GameScene(this->mData)));
 			}
 		}
