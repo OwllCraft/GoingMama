@@ -53,6 +53,8 @@ To get **golden medal**, you should score higher than **50**. having golden meda
 
 #### A game and featuring design, art, and code by Jerico, also known as OwllCraft
 
+#### Sound effects are from [https://www.zapsplat.com/](zapsplat.com)
+
 #### Contributors:
 
 Thanks to Swagshaw, and Whyx for testing the game.
