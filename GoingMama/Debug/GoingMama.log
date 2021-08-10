@@ -1,32 +1,7 @@
-﻿  AppEngine.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\AppEngine.cpp(9,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Flash.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(7,94): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(7,67): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(17,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(21,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(29,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Flash.cpp(33,13): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-  GameOverScene.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameOverScene.cpp(28,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+﻿  GameOverScene.cpp
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameOverScene.cpp(35,185): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   GameScene.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(185,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(203,71): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -35,7 +10,7 @@ E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(18
           [
               T=float
           ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(194,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(212,74): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
               T=unsigned int
@@ -44,58 +19,7 @@ E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\GameScene.cpp(19
           [
               T=float
           ]
-  Land.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Land.cpp(27,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-  main.cpp
   MainMenuScene.cpp
-  Pillar.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Pillar.cpp(22,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Pillar.cpp(28,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Pillar.cpp(28,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\Pillar.cpp(34,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-  Player.cpp
-  SkyBlock.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SkyBlock.cpp(27,51): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-          and
-          [
-              T=float
-          ]
-  SplashScene.cpp
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(17,102): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(17,59): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
-E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\GoingMama\SplashScene.cpp(23,60): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-          with
-          [
-              T=unsigned int
-          ]
   Generating Code...
   LINK : E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\Debug\GoingMama.exe not found or not built by the last incremental link; performing full link
   GoingMama.vcxproj -> E:\ADMIN\Desktop\Projects\SFML-Applications\GoingMama\Debug\GoingMama.exe

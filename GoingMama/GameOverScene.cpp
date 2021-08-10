@@ -4,9 +4,16 @@
 #include <sstream>
 #include <fstream>
 
+// #include <iostream> // Debugging purposes
+
 namespace OwllCraft {
 	void GameOverScene::init() {
 		updateHighScore();
+		medalInit();
+		
+		// Button SFX Init:
+		mButtonBufferSfx.loadFromFile(_BUTTON_SFX_FILEPATH_);
+		mButtonClickSfx.setBuffer(mButtonBufferSfx);
 
 		// Background Init:
 		mBackgroundTex.loadFromFile(_GAMEOVER_BACKGROUND_FILEPATH_);
@@ -47,6 +54,10 @@ namespace OwllCraft {
 		mHighScoreText.setOutlineThickness(5.f);
 		mHighScoreText.setOrigin(mHighScoreText.getGlobalBounds().width / 2, mHighScoreText.getGlobalBounds().height / 2);
 		mHighScoreText.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 81.f, mGameOverPanel.getPosition().y + 43.f * 3.11f);
+
+		// Medal Position:
+		mMedal.setOrigin(mMedal.getGlobalBounds().width / 2, mMedal.getGlobalBounds().height / 2);
+		mMedal.setPosition((mGameOverPanel.getPosition().x + mGameOverPanel.getGlobalBounds().width) - 81.f, mGameOverPanel.getPosition().y + 60.f * 3.8f);
 	}
 
 	void GameOverScene::handleInput() {
@@ -57,6 +68,7 @@ namespace OwllCraft {
 				this->mData->window.close();
 			}
 			if (this->mData->input.isSpriteClicked(mRetryButton, sf::Mouse::Left, this->mData->window)) {
+				mButtonClickSfx.play();
 				this->mData->scene.changeScene(SceneRef(new GameScene(this->mData)));
 			}
 		}
@@ -74,6 +86,7 @@ namespace OwllCraft {
 		this->mData->window.draw(mScoreText);
 		this->mData->window.draw(mHighScoreText);
 		this->mData->window.draw(mRetryButton);
+		this->mData->window.draw(mMedal);
 		this->mData->window.display();
 	}
 
@@ -96,5 +109,30 @@ namespace OwllCraft {
 			writeFile << mHighScore;
 		}
 		writeFile.close();
+	}
+
+	void GameOverScene::medalInit() {
+		// Init SFX:
+		mMedalBufferSfx.loadFromFile(_MEDAL_SFX_FILEPATH_);
+		mMedalSfx.setBuffer(mMedalBufferSfx);
+		mMedalSfx.play();
+
+		// Gold Medal:
+		if (mScore > 50) {
+			mMedalTex.loadFromFile(_GOLD_MEDAL_FILEPATH_);
+			mMedal.setTexture(mMedalTex);
+		} 
+
+		// Silver Medal:
+		else if (mScore > 20) {
+			mMedalTex.loadFromFile(_SILVER_MEDAL_FILEPATH_);
+			mMedal.setTexture(mMedalTex);
+		}
+
+		// Bronze Medal:
+		else if (mScore >= 0) { 
+			mMedalTex.loadFromFile(_BRONZE_MEDAL_FILEPATH_);
+			mMedal.setTexture(mMedalTex);
+		}	
 	}
 }
