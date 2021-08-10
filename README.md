@@ -1,4 +1,3 @@
-
 ![](https://img.itch.zone/aW1nLzY2ODIyMjMucG5n/original/qowVjR.png)  
 
 
@@ -33,8 +32,14 @@ Left Mouse Button - Fly
 ![](https://img.itch.zone/aW1nLzY2ODIyMjUucG5n/original/wy%2Fyx0.png)
 #### HOW TO GET MEDALS
 Medals judges how great you are in the game, because medal symbolizes honor, award, and many more. In order to get medals, you should score higher than you used to score. You must aim to reach higher score level.
-![](https://img.itch.zone/aW1nLzY3MDkwMzkucG5n/original/cPI%2Byi.png)![](https://img.itch.zone/aW1nLzY3MDkwNDEucG5n/original/kHUtLo.png)![](https://img.itch.zone/aW1nLzY3MDkwNDMucG5n/original/RGeqP2.png)
-In default, you get bronze medal, even if you score lower, such as **0**. Don't worry if you got bronze medal, we all started somewhere, and if you want to improve, you should practice, grow, adapt and learn from your mistake, that's how you get an experience. If you want to get **silver medal**, you should score higher than **20**. Having a silver medal into the game means you come second in a competition, that means your not bad after all! To get **golden medal**, you should score higher than **50**. having golden medal doesn't mean you've already accomplished your goal. Life is meaningless and we can do everything we want, either we have goal or something. If you want to aim higher, you can score higher than hundred even if you still have a golden medal. It's up to you!
+![](https://img.itch.zone/aW1nLzY3MDkwMzkucG5n/original/cPI%2Byi.png)
+In default, you get bronze medal, even if you score lower, such as **0**. Don't worry if you got bronze medal, we all started somewhere, and if you want to improve, you should practice, grow, adapt and learn from your mistake, that's how you get an experience.
+
+![](https://img.itch.zone/aW1nLzY3MDkwNDMucG5n/original/RGeqP2.png)
+If you want to get **silver medal**, you should score higher than **20**. Having a silver medal into the game means you come second in a competition, that means your not bad after all!
+
+![](https://img.itch.zone/aW1nLzY3MDkwNDEucG5n/original/kHUtLo.png)
+To get **golden medal**, you should score higher than **50**. having golden medal doesn't mean you've already accomplished your goal. Life is meaningless and we can do everything we want, either we have goal or something. If you want to aim higher, you can score higher than hundred even if you still have a golden medal. It's up to you!
 
 ![](https://img.itch.zone/aW1nLzY2ODIyMjUucG5n/original/wy%2Fyx0.png)  
 
