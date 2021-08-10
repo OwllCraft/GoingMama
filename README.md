@@ -4,6 +4,20 @@
 **GoingMama**  is a flappy bird clone, long-runner, 2D, arcade mini-game, which is dedicated to my mom, as her birthday present. This is my first developed mini-game I've made using a graphics library, SFML.
 
 ##### ANY FEEDBACK IS APPRECIATED!
+![](https://img.itch.zone/aW1nLzY2ODIyMjMucG5n/original/qowVjR.png)
+#### WHAT'S NEW?
+It's seems many people have liked the game so far, so I've decided to update the game by adding more sound effects into it and adding new feature which is medals.
+```
+Updated since: August 10 2020
+NEW: Medals - You can get medals by scoring as high as you can, it shows up at the game over 
+scene when you lost the game. 
+NEW: Button Sound Effects - Added sound effects for buttons when you click them!
+NEW: Sound Effects when you scored tenths value in gameplay and the score text changes to 
+	 yellow.
+NEW: Winning Sound Effect - when you change the scene from gameplay to game over scene, a 
+	 winning sound effect will play so it feels like your entering the hall of fame when you 
+	 hear that sound!
+```
 
 ![](https://img.itch.zone/aW1nLzY2ODIyMjMucG5n/original/qowVjR.png)  
 
@@ -14,6 +28,22 @@ The game is very similar to flappy bird, simply tap or click the screen to fly a
 **CONTROLS:**  
 
 Left Mouse Button - Fly
+
+![](https://img.itch.zone/aW1nLzY2ODIyMjUucG5n/original/wy%2Fyx0.png)
+#### HOW TO GET MEDALS
+Medals judges how great you are in the game, because medal symbolizes honor, award, and many more. In order to get medals, you should score higher than you used to score. You must aim to reach higher score level.
+
+![](https://img.itch.zone/aW1nLzY3MDkwMzkucG5n/original/cPI%2Byi.png)
+
+In default, you get bronze medal, even if you score lower, such as **0**. Don't worry if you got bronze medal, we all started somewhere, and if you want to improve, you should practice, grow, adapt and learn from your mistake, that's how you get an experience.
+
+![](https://img.itch.zone/aW1nLzY3MDkwNDMucG5n/original/RGeqP2.png)
+
+If you want to get **silver medal**, you should score higher than **20**. Having a silver medal into the game means you come second in a competition, that means your not bad after all!
+
+![](https://img.itch.zone/aW1nLzY3MDkwNDEucG5n/original/kHUtLo.png)
+
+To get **golden medal**, you should score higher than **50**. having golden medal doesn't mean you've already accomplished your goal. Life is meaningless and we can do everything we want, either we have goal or something. If you want to aim higher, you can score higher than hundred even if you still have a golden medal. It's up to you!
 
 ![](https://img.itch.zone/aW1nLzY2ODIyMjUucG5n/original/wy%2Fyx0.png)  
 
